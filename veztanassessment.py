@@ -4,7 +4,9 @@ For example, given the string "ab", your function should return [['a', 1], ['b',
 """
 
 # Counts the occurrences of each charcter in the given string
-def findOccurrences(statement):
+def countString():
+	# Asks user to enter a string
+	statement = input("Enter String: ")
 	# Create a dictionary 
 	occurrences = {}
 	# for every character in the dictionary, use it as a key and count how many times it appears in the string. If it exists more than once, the value of the key is incremented by 1. Otherwise, the key's value is 1.
@@ -13,24 +15,14 @@ def findOccurrences(statement):
 			occurrences[word] += 1
 		else:
 			occurrences[word] = 1
-	# Passes the dictionary to the finalAnswer subroutine and converts the answer to the desired format
-	finalAnswer(occurrences)
-	
-#Converts answer to desired format
-def finalAnswer(occurrences):
-	# Initialises array
+	# Converting the answer to the desired format
+	# Initialises array that will contain the final answer
 	answerArray = []
 	for key, value in occurrences.items():
 		# Creates a temporary array that stores the character and its number of occurrences in it
 		temp = [key, value]
 		answerArray.append(temp)
 	print("Answer: {0}".format(answerArray))
-	
-# Asks user to enter a string
-def Run():
-	statement = input("Enter String: ")
-	findOccurrences(statement)
-
 
 if __name__ == "__main__":
-	Run()
+	countString()
